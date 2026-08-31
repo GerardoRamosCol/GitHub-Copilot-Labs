@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "azure-devops-training": {
+      "type": "http",
+      "url": "https://mcp.dev.azure.com/{organization}",
+      "headers": {
+        "X-MCP-Toolsets": "repos,wit,pipelines",
+        "X-MCP-Readonly": "true"
+      }
+    }
+  },
+  "inputs": []
+}

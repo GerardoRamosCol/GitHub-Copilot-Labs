@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+
+# .NET
+bin/
+obj/
+
+# Node.js
+node_modules/
+coverage/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db

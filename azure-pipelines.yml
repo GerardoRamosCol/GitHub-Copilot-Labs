@@ -10,6 +10,14 @@ pr:
       - main
 
 jobs:
+  - job: AgenticCourse
+    displayName: Validate agentic course
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - pwsh: ./agentic-learning-path/scripts/validate-course.ps1
+        displayName: Validate labs, links, and templates
+
   - job: Python
     pool:
       vmImage: ubuntu-latest

@@ -1,0 +1,8 @@
+{
+  "product": "Northstar Collaboration",
+  "version": "2.4.0",
+  "targetDate": "2026-09-19",
+  "environment": "production",
+  "rollbackReviewed": false,
+  "generatedFrom": "training-fixture"
+}

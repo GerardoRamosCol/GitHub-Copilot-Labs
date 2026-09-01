@@ -1,15 +1,24 @@
 # GitHub Copilot Developer Training
 
-This repository provides two ways to learn practical GitHub Copilot development
-workflows in Visual Studio Code: a self-paced learning path built from scratch
+This repository provides three ways to learn practical GitHub Copilot workflows:
+a language-neutral agentic learning path, a self-paced developer learning path,
 and a prepared three-hour workshop using minimal inventory domain starters.
 
 ## Choose an offering
 
 | Offering | Best for | Duration | Starting point | Languages | Start |
 |---|---|---:|---|---|---|
+| Agentic Copilot Learning Path | Learners who want reusable instructions, prompts, agents, skills, and CLI workflows | 6-8 hours | Fictional release-readiness workspace | Language-neutral | [Agentic Path](agentic-learning-path/README.md) |
 | Self-paced Developer Learning Path | Learners who want a progressive, end-to-end course | 5-7 hours | Empty local directory | Python, .NET, or TypeScript | [Learning Path](learning-path/README.md) |
 | Regular Code Labs | Instructor-led or time-boxed workshops | 3 hours | Prepared starter implementation | Python, .NET, or TypeScript | [Student Guide](docs/student-guide.md) |
+
+## Agentic Copilot Learning Path
+
+The [GitHub Copilot Agentic Learning Path](agentic-learning-path/README.md) is a
+language-neutral sequence of seven labs covering Copilot fundamentals,
+repository instructions, file-specific instructions, prompt files, custom
+agents, Agent Skills, and GitHub Copilot CLI. It uses local fictional release
+evidence and requires no cloud resource or external repository write.
 
 ## Developer Learning Path
 
@@ -53,12 +62,14 @@ validate the full track.
 - Visual Studio Code with GitHub Copilot access, signed in and enabled
 - Git and familiarity with basic source-control workflows
 - One supported runtime: Python 3.11+, .NET SDK 8, or Node.js 22 with npm
+- PowerShell 6+ and GitHub Copilot CLI for the agentic path's final lab
 - For the remote MCP lab, access to an isolated Microsoft Entra-backed Azure
   DevOps project and outbound HTTPS access to `mcp.dev.azure.com`
 
 ## Repository Layout
 
 ```text
+agentic-learning-path/  Language-neutral seven-lab agentic customization course
 learning-path/          Self-paced six-lab course, setup, and course assets
 docs/                   Student and instructor guides for the regular labs
 tracks/                 Prepared Python, .NET, and TypeScript domain starters
@@ -72,6 +83,9 @@ azure-pipelines.yml     Validation pipeline for all three prepared tracks
 These commands match `azure-pipelines.yml`:
 
 ```powershell
+# Agentic course documentation
+pwsh -File agentic-learning-path/scripts/validate-course.ps1
+
 # Python
 Push-Location tracks/python
 python -m pip install -e ".[test]"
